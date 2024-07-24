@@ -27,8 +27,20 @@ public class ProdutoPojo {
         return valor;
     }
 
-    public void setValor(double valor) {
-        this.valor = valor;
+    public void setValor(double novoValor) {
+        //Condicional
+        if (novoValor > 0) {
+            this.valor = novoValor;
+        }
+        else {
+            //Exceção
+            try{
+                throw new IllegalAccessException("Valor deve ser maior que 0.");
+            }
+            catch (IllegalAccessException e){
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public String getTamanho() {

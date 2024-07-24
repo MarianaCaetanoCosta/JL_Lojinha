@@ -9,7 +9,8 @@ public class LojinhaApp {
 
         //Passar valor usando o set
         meuProdutoPojo.setNome("Playstation 5");
-        meuProdutoPojo.setValor(4599.99);
+        //meuProdutoPojo.setValor(4599.99);
+        meuProdutoPojo.setValor(0.00);
         meuProdutoPojo.setMarca("Sony");
         meuProdutoPojo.setTamanho("Medio");
         meuProdutoPojo.setItensInclusos("2 Controle - 3 Jogos");
