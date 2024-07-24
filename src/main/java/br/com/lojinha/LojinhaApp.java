@@ -7,17 +7,18 @@ public class LojinhaApp {
         //Importar a classe pojo > Produto e instanciar o objeto
         ProdutoPojo meuProdutoPojo = new ProdutoPojo();
 
-        //Passar valor aos atributos da classe
-        meuProdutoPojo.nome = "Playstation 5";
-        meuProdutoPojo.valor = 4599.99;
-        meuProdutoPojo.marca = "Sony";
-        meuProdutoPojo.tamanho = "Medio";
-        meuProdutoPojo.itensInclusos = "2 Controle - 3 Jogos";
+        //Passar valor usando o set
+        meuProdutoPojo.setNome("Playstation 5");
+        meuProdutoPojo.setValor(4599.99);
+        meuProdutoPojo.setMarca("Sony");
+        meuProdutoPojo.setTamanho("Medio");
+        meuProdutoPojo.setItensInclusos("2 Controle - 3 Jogos");
 
-        System.out.println("Nome: " + meuProdutoPojo.nome);
-        System.out.println("Valor: " + meuProdutoPojo.valor);
-        System.out.println("Marca: " + meuProdutoPojo.marca);
-        System.out.println("Tamanho: " + meuProdutoPojo.tamanho);
-        System.out.println("Itens inclusos: " + meuProdutoPojo.itensInclusos);
+        //Imprimir usando o valor do get
+        System.out.println("Nome: " + meuProdutoPojo.getNome());
+        System.out.println("Valor: " + meuProdutoPojo.getValor());
+        System.out.println("Marca: " + meuProdutoPojo.getMarca());
+        System.out.println("Tamanho: " + meuProdutoPojo.getTamanho());
+        System.out.println("Itens inclusos: " + meuProdutoPojo.getItensInclusos());
     }
 }
