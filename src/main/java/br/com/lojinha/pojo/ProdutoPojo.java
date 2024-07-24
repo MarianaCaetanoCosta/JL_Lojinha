@@ -51,8 +51,17 @@ public class ProdutoPojo {
         return tamanho;
     }
 
-    public void setTamanho(String tamanho) {
-        this.tamanho = tamanho;
+    //Criar condicional de tamanho
+    public void setTamanho(String novoTamanho) {
+        if (novoTamanho.equalsIgnoreCase("Pequeno")
+                || novoTamanho.equalsIgnoreCase("Medio")
+                || novoTamanho.equalsIgnoreCase("Grande")) {
+
+            this.tamanho = novoTamanho;
+        }
+        else{
+            throw new IllegalArgumentException("Tamanho pode ser Pequeno, Médio ou Grande. Você digitou: " + novoTamanho);
+        }
     }
 
 

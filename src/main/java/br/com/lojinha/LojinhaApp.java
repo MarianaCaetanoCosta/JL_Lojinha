@@ -15,7 +15,10 @@ public class LojinhaApp {
         meuProdutoPojo.setValor(4599.99);
         //meuProdutoPojo.setValor(0.00);
         meuProdutoPojo.setMarca("Sony");
-        meuProdutoPojo.setTamanho("Medio");
+
+        //Restrição de tamanho
+        //meuProdutoPojo.setTamanho("Medio");
+        meuProdutoPojo.setTamanho("Gigante");
 
         //Item 0 -> 2 Controle
         //Item 1 -> 3 Jogos
