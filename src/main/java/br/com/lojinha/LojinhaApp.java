@@ -1,5 +1,6 @@
 package br.com.lojinha;
 
+import br.com.lojinha.enuns.Tamanho;
 import br.com.lojinha.pojo.ProdutoPojo;
 
 import java.util.ArrayList;
@@ -16,9 +17,8 @@ public class LojinhaApp {
         //meuProdutoPojo.setValor(0.00);
         meuProdutoPojo.setMarca("Sony");
 
-        //Restrição de tamanho
-        //meuProdutoPojo.setTamanho("Medio");
-        meuProdutoPojo.setTamanho("Gigante");
+        //Usando Enumerador
+        meuProdutoPojo.setTamanho(Tamanho.PEQUENO);
 
         //Item 0 -> 2 Controle
         //Item 1 -> 3 Jogos
@@ -38,6 +38,9 @@ public class LojinhaApp {
         System.out.println("Nome: " + meuProdutoPojo.getNome());
         System.out.println("Valor: " + meuProdutoPojo.getValor());
         System.out.println("Marca: " + meuProdutoPojo.getMarca());
+
+        System.out.println();
+        
         System.out.println("Tamanho: " + meuProdutoPojo.getTamanho());
 
         System.out.println();

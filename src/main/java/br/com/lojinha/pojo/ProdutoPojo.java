@@ -1,12 +1,16 @@
 package br.com.lojinha.pojo;
 
+import br.com.lojinha.enuns.Tamanho;
+
 import java.util.List;
 
 public class ProdutoPojo {
     private String nome;
     private String marca;
     private double valor;
-    private String tamanho;
+
+    //Usar enumerador tamanho
+    private Tamanho tamanho;
 
     //Criado Lista de Strings
     private List<String> itensInclusos;
@@ -47,21 +51,14 @@ public class ProdutoPojo {
         }
     }
 
-    public String getTamanho() {
-        return tamanho;
+    //Altere os métodos get/set para receber o enumetador Tamanho
+    public Tamanho getTamanho() {
+        return this.tamanho;
     }
 
     //Criar condicional de tamanho
-    public void setTamanho(String novoTamanho) {
-        if (novoTamanho.equalsIgnoreCase("Pequeno")
-                || novoTamanho.equalsIgnoreCase("Medio")
-                || novoTamanho.equalsIgnoreCase("Grande")) {
-
-            this.tamanho = novoTamanho;
-        }
-        else{
-            throw new IllegalArgumentException("Tamanho pode ser Pequeno, Médio ou Grande. Você digitou: " + novoTamanho);
-        }
+    public void setTamanho(Tamanho novoTamanho) {
+        this.tamanho = novoTamanho;
     }
 
 
