@@ -1,11 +1,15 @@
 package br.com.lojinha.pojo;
 
+import java.util.List;
+
 public class ProdutoPojo {
     private String nome;
     private String marca;
     private double valor;
     private String tamanho;
-    private String itensInclusos;
+
+    //Criado Lista de Strings
+    private List<String> itensInclusos;
 
     public String getNome() {
         return nome;
@@ -51,11 +55,13 @@ public class ProdutoPojo {
         this.tamanho = tamanho;
     }
 
-    public String getItensInclusos() {
+
+    //Implementação Lista de ItenInclusos
+    public List<String> getItensInclusos() {
         return itensInclusos;
     }
 
-    public void setItensInclusos(String itensInclusos) {
-        this.itensInclusos = itensInclusos;
+    public void setItensInclusos(List<String> novosItensInclusos) {
+        this.itensInclusos = novosItensInclusos;
     }
 }
