@@ -3,6 +3,7 @@ package br.com.lojinha;
 import br.com.lojinha.enuns.Tamanho;
 import br.com.lojinha.pojo.ItemIncluso;
 import br.com.lojinha.pojo.Produto;
+import br.com.lojinha.pojo.ProdutoNacional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,5 +46,12 @@ public class LojinhaApp {
             System.out.println(itemAtual.getQuantidade());
         }
         System.out.println("Acabaram-se os itens");
+        System.out.println();
+
+        System.out.println();
+        //Herança: produto nacional
+        ProdutoNacional meuProdutoNacional = new ProdutoNacional("Sony", Tamanho.GRANDE);
+        meuProdutoNacional.setImpostoNacional(0.55789);
+        System.out.println(meuProdutoNacional.getImpostoNacional());
     }
 }
