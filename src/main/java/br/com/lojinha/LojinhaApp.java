@@ -38,20 +38,12 @@ public class LojinhaApp {
 
         System.out.println();
 
-        //Imprime o quantidade de itens da lista
-        System.out.println("Número de itens da lista: " + meuProduto.getItensInclusos().size());
-        System.out.println();
-        //Imprime o item da lista pelo id informado
-        System.out.println("* Primeiro Item:");
-        System.out.println("Nome: " + meuProduto.getItensInclusos().get(0).getNome());
-        System.out.println("Quantidade: " + meuProduto.getItensInclusos().get(0).getQuantidade());
-        System.out.println();
-        System.out.println("* Segundo Item:");
-        System.out.println("Nome: " + meuProduto.getItensInclusos().get(1).getNome());
-        System.out.println("Quantidade: " +meuProduto.getItensInclusos().get(1).getQuantidade());
-        System.out.println();
-        System.out.println("* Terceiro Item: ");
-        System.out.println("Nome: " + meuProduto.getItensInclusos().get(2).getNome());
-        System.out.println("Quantidade: " + meuProduto.getItensInclusos().get(2).getQuantidade());
+        //Navegar na losta e imprimir os itens
+        System.out.println("Começando a apresentar os itens da lista");
+        for (ItemIncluso itemAtual : meuProduto.getItensInclusos()) {
+            System.out.println(itemAtual.getNome());
+            System.out.println(itemAtual.getQuantidade());
+        }
+        System.out.println("Acabaram-se os itens");
     }
 }
