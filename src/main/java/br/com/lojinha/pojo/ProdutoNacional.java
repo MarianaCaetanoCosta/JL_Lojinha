@@ -1,8 +1,9 @@
 package br.com.lojinha.pojo;
 
 import br.com.lojinha.enuns.Tamanho;
+import br.com.lojinha.interfaces.Favorito;
 
-public class ProdutoNacional extends Produto{
+public class ProdutoNacional extends Produto implements Favorito {
     private double impostoNacional;
 
     //Importado o construtor da classe importada Produto
@@ -17,5 +18,10 @@ public class ProdutoNacional extends Produto{
 
     public void setImpostoNacional(double novoImpostoNacional){
         this.impostoNacional = novoImpostoNacional;
+    }
+
+    @Override
+    public String getFavorito() {
+        return this.getNome() + ", " + this.getMarca() + " e " + this.getValor();
     }
 }

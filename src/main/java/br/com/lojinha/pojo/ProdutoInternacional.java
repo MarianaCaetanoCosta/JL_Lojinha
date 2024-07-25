@@ -1,8 +1,9 @@
 package br.com.lojinha.pojo;
 
 import br.com.lojinha.enuns.Tamanho;
+import br.com.lojinha.interfaces.Favorito;
 
-public class ProdutoInternacional extends Produto{
+public class ProdutoInternacional extends Produto implements Favorito {
     private double taxaImportacao;
 
     //Super método extendidi da class Produto
@@ -34,5 +35,10 @@ public class ProdutoInternacional extends Produto{
 
     public void setTaxaImportacao(double taxaImportacao) {
         this.taxaImportacao = taxaImportacao;
+    }
+
+    @Override
+    public String getFavorito() {
+        return this.getNome() + ", " + this.getMarca() + " e " + this.getValor();
     }
 }
