@@ -4,17 +4,15 @@ import br.com.lojinha.enuns.Tamanho;
 
 import java.util.List;
 
-public class ProdutoPojo {
+public class Produto {
     private String nome;
     private String marca;
     private double valor;
-    //Usar enumerador tamanho
-    private Tamanho tamanho;
-    //Criado Lista de Strings
-    private List<String> itensInclusos;
+    private Tamanho tamanho; //Usar enumerador tamanho
+    private List<ItemIncluso> itensInclusos; //Altere o tipo da lista de String para a classe ItemIncluso
 
     //Contrutores
-    public ProdutoPojo(String marcaInicial, Tamanho tamanhoInicial){
+    public Produto(String marcaInicial, Tamanho tamanhoInicial){
         //Definir comandos que serão iniciados durante a instanciação
         this.marca = marcaInicial;
         this.tamanho = tamanhoInicial;
@@ -69,11 +67,11 @@ public class ProdutoPojo {
 
 
     //Implementação Lista de ItenInclusos
-    public List<String> getItensInclusos() {
+    public List<ItemIncluso> getItensInclusos() {
         return itensInclusos;
     }
 
-    public void setItensInclusos(List<String> novosItensInclusos) {
+    public void setItensInclusos(List<ItemIncluso> novosItensInclusos) {
         this.itensInclusos = novosItensInclusos;
     }
 }
