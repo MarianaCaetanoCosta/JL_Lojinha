@@ -9,16 +9,11 @@ import java.util.List;
 public class LojinhaApp {
     public static void main(String[] args) {
         //Importar a classe pojo > Produto e instanciar o objeto
-        ProdutoPojo meuProdutoPojo = new ProdutoPojo();
+        ProdutoPojo meuProdutoPojo = new ProdutoPojo("Nestle", Tamanho.MEDIO);
 
         //Passar valor usando o set
         meuProdutoPojo.setNome("Playstation 5");
         meuProdutoPojo.setValor(4599.99);
-        //meuProdutoPojo.setValor(0.00);
-        meuProdutoPojo.setMarca("Sony");
-
-        //Usando Enumerador
-        meuProdutoPojo.setTamanho(Tamanho.PEQUENO);
 
         //Item 0 -> 2 Controle
         //Item 1 -> 3 Jogos
@@ -54,5 +49,11 @@ public class LojinhaApp {
         //Imprime o item da lista pelo id informado
         System.out.println("Item por id: " + meuProdutoPojo.getItensInclusos().get(0));
         System.out.println("Item por id: " + meuProdutoPojo.getItensInclusos().get(1));
+
+        System.out.println();
+
+        //Usando construtor
+        System.out.println("Marca: " + meuProdutoPojo.getMarca());
+        System.out.println("Tamanho: " + meuProdutoPojo.getTamanho());
     }
 }

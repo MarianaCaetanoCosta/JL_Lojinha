@@ -8,13 +8,19 @@ public class ProdutoPojo {
     private String nome;
     private String marca;
     private double valor;
-
     //Usar enumerador tamanho
     private Tamanho tamanho;
-
     //Criado Lista de Strings
     private List<String> itensInclusos;
 
+    //Contrutores
+    public ProdutoPojo(String marcaInicial, Tamanho tamanhoInicial){
+        //Definir comandos que serão iniciados durante a instanciação
+        this.marca = marcaInicial;
+        this.tamanho = tamanhoInicial;
+    }
+
+    //Métodos Get/Set
     public String getNome() {
         return nome;
     }
