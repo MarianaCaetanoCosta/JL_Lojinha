@@ -7,7 +7,7 @@ import java.util.List;
 public class Produto {
     private String nome;
     private String marca;
-    private double valor;
+    protected double valor;
     private Tamanho tamanho; //Usar enumerador tamanho
     private List<ItemIncluso> itensInclusos; //Altere o tipo da lista de String para a classe ItemIncluso
 

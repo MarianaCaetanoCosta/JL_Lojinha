@@ -16,7 +16,7 @@ public class LojinhaApp {
 
         //Passar valor usando o set
         meuProduto.setNome("Playstation 5");
-        meuProduto.setValor(4599.99);
+        meuProduto.setValor(30);
 
         //Item 0 -> 2 Controle
         //Item 1 -> 3 Jogos
@@ -53,10 +53,12 @@ public class LojinhaApp {
         //Herança: produto nacional
         ProdutoNacional meuProdutoNacional = new ProdutoNacional("Sony", Tamanho.GRANDE);
         meuProdutoNacional.setImpostoNacional(0.55789);
-        System.out.println("Imposto Nacional: " + meuProdutoNacional.getImpostoNacional());
+        System.out.println("* Produto Nacional \nImposto Nacional: " + meuProdutoNacional.getImpostoNacional());
+
+        System.out.println();
 
         ProdutoInternacional meuProdutoInternacional = new ProdutoInternacional("Mac", Tamanho.MEDIO);
-        meuProdutoInternacional.setTaxaImportacao(2.50);
-        System.out.println("Taxa importação: " + meuProdutoInternacional.getTaxaImportacao());
+        meuProdutoInternacional.setValor(-100);
+        //System.out.println("* Produto Internacional \nTaxa importação: " + meuProdutoInternacional.getTaxaImportacao());
     }
 }
